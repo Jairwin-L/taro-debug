@@ -9,6 +9,7 @@ specifiers:
   '@tarojs/components': 3.6.2
   '@tarojs/helper': 3.6.2
   '@tarojs/plugin-framework-react': 3.6.2
+  '@tarojs/plugin-html': ^3.6.2
   '@tarojs/plugin-platform-alipay': 3.6.2
   '@tarojs/plugin-platform-h5': 3.6.2
   '@tarojs/plugin-platform-jd': 3.6.2
@@ -25,6 +26,7 @@ specifiers:
   '@types/webpack-env': ^1.13.6
   '@typescript-eslint/eslint-plugin': ^5.20.0
   '@typescript-eslint/parser': ^5.20.0
+  babel-plugin-import: ^1.13.6
   babel-preset-taro: 3.6.2
   eslint: ^8.12.0
   eslint-config-taro: 3.6.2
@@ -45,6 +47,7 @@ dependencies:
   '@tarojs/components': registry.npmjs.org/@tarojs/components/3.6.2_@types+react@18.0.28
   '@tarojs/helper': registry.npmjs.org/@tarojs/helper/3.6.2
   '@tarojs/plugin-framework-react': registry.npmjs.org/@tarojs/plugin-framework-react/3.6.2_u75edxy3y67fkn4jekn7tac6mu
+  '@tarojs/plugin-html': registry.npmjs.org/@tarojs/plugin-html/3.6.2_@types+react@18.0.28
   '@tarojs/plugin-platform-alipay': registry.npmjs.org/@tarojs/plugin-platform-alipay/3.6.2_pmekkgnqduwlme35zpnqhenc34
   '@tarojs/plugin-platform-h5': registry.npmjs.org/@tarojs/plugin-platform-h5/3.6.2_@types+react@18.0.28
   '@tarojs/plugin-platform-jd': registry.npmjs.org/@tarojs/plugin-platform-jd/3.6.2_@types+react@18.0.28
@@ -56,6 +59,7 @@ dependencies:
   '@tarojs/runtime': registry.npmjs.org/@tarojs/runtime/3.6.2
   '@tarojs/shared': registry.npmjs.org/@tarojs/shared/3.6.2
   '@tarojs/taro': registry.npmjs.org/@tarojs/taro/3.6.2_@types+react@18.0.28
+  babel-plugin-import: registry.npmjs.org/babel-plugin-import/1.13.6
   react: registry.npmjs.org/react/18.2.0
   react-dom: registry.npmjs.org/react-dom/18.2.0_react@18.2.0
 
@@ -2618,6 +2622,24 @@ packages:
       - vue
     dev: false
 
+  registry.npmjs.org/@tarojs/plugin-html/3.6.2_@types+react@18.0.28:
+    resolution: {integrity: sha512-c/NST8DE4Iv4LRTIGcaes0qIS2cXOponSdvnq39NDCHdOaMRJDMZXlXofSUiSzDpJX0IiPqY+BKcPquMa9u4tg==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/@tarojs/plugin-html/-/plugin-html-3.6.2.tgz}
+    id: registry.npmjs.org/@tarojs/plugin-html/3.6.2
+    name: '@tarojs/plugin-html'
+    version: 3.6.2
+    dependencies:
+      '@babel/parser': registry.npmjs.org/@babel/parser/7.21.3
+      '@tarojs/runtime': registry.npmjs.org/@tarojs/runtime/3.6.2
+      '@tarojs/service': registry.npmjs.org/@tarojs/service/3.6.2_@types+react@18.0.28
+      '@tarojs/shared': registry.npmjs.org/@tarojs/shared/3.6.2
+    transitivePeerDependencies:
+      - '@types/react'
+      - '@types/webpack'
+      - '@types/webpack-dev-server'
+      - supports-color
+      - vue
+    dev: false
+
   registry.npmjs.org/@tarojs/plugin-platform-alipay/3.6.2_pmekkgnqduwlme35zpnqhenc34:
     resolution: {integrity: sha512-GO1J2KwfQ7Nkseh6uBmjM6Xqa9fVk6yI2bitzpk7V1kK5PoQ4pAYLLOz01L6//njzfEA5Idu/ZNmwBkwMux4Eg==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/@tarojs/plugin-platform-alipay/-/plugin-platform-alipay-3.6.2.tgz}
     id: registry.npmjs.org/@tarojs/plugin-platform-alipay/3.6.2
@@ -3570,7 +3592,7 @@ packages:
     name: '@vue/compiler-core'
     version: 3.2.47
     dependencies:
-      '@babel/parser': registry.npmjs.org/@babel/parser/7.16.4
+      '@babel/parser': registry.npmjs.org/@babel/parser/7.21.3
       '@vue/shared': registry.npmjs.org/@vue/shared/3.2.47
       estree-walker: registry.npmjs.org/estree-walker/2.0.2
       source-map: registry.npmjs.org/source-map/0.6.1
@@ -3590,7 +3612,7 @@ packages:
     name: '@vue/compiler-sfc'
     version: 3.2.47
     dependencies:
-      '@babel/parser': registry.npmjs.org/@babel/parser/7.16.4
+      '@babel/parser': registry.npmjs.org/@babel/parser/7.21.3
       '@vue/compiler-core': registry.npmjs.org/@vue/compiler-core/3.2.47
       '@vue/compiler-dom': registry.npmjs.org/@vue/compiler-dom/3.2.47
       '@vue/compiler-ssr': registry.npmjs.org/@vue/compiler-ssr/3.2.47
@@ -3616,7 +3638,7 @@ packages:
     name: '@vue/reactivity-transform'
     version: 3.2.47
     dependencies:
-      '@babel/parser': registry.npmjs.org/@babel/parser/7.16.4
+      '@babel/parser': registry.npmjs.org/@babel/parser/7.21.3
       '@vue/compiler-core': registry.npmjs.org/@vue/compiler-core/3.2.47
       '@vue/shared': registry.npmjs.org/@vue/shared/3.2.47
       estree-walker: registry.npmjs.org/estree-walker/2.0.2
@@ -4544,6 +4566,14 @@ packages:
     version: 1.0.3
     engines: {node: '>= 6.x.x'}
     dev: true
+
+  registry.npmjs.org/babel-plugin-import/1.13.6:
+    resolution: {integrity: sha512-N7FYnGh0DFsvDRkAPsvFq/metVfVD7P2h1rokOPpEH4cZbdRHCW+2jbXt0nnuqowkm/xhh2ww1anIdEpfYa7ZA==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/babel-plugin-import/-/babel-plugin-import-1.13.6.tgz}
+    name: babel-plugin-import
+    version: 1.13.6
+    dependencies:
+      '@babel/helper-module-imports': registry.npmjs.org/@babel/helper-module-imports/7.18.6
+    dev: false
 
   registry.npmjs.org/babel-plugin-jsx-attributes-array-to-object/0.3.0:
     resolution: {integrity: sha512-XvbCsBFo/y4n2DzRtICQ60Kb3FWPIK359YsUkDPjC4UBCF/FMENKYzxarEhAD1GnrAuui5wOUvli89yqF1IzdA==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/babel-plugin-jsx-attributes-array-to-object/-/babel-plugin-jsx-attributes-array-to-object-0.3.0.tgz}
