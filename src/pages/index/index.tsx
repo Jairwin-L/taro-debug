@@ -1,30 +1,44 @@
+import Taro from '@tarojs/taro';
 import { View } from '@tarojs/components';
-import { Form, Input, Button } from '@nutui/nutui-react-taro';
+import { Button } from '@nutui/nutui-react-taro';
+import useModel from './mode';
 import './index.scss';
 
 export default function Main() {
-  const onFinish = (values) => {
-    console.log(`values----->：`, values);
-  };
+	const { data, loading, success } = useModel() || {};
+	console.log(`useModel()----->：`, useModel());
   return (
     <>
-      <View className='main'>首页</View>
-			<Form onFinish={(values) => onFinish(values)}>
-        <Form.Item label='姓名' name='username' rules={[{ required: true, message: '请输入姓名' }]}>
-          <Input className='nut-input-text' placeholder='请输入姓名' type='text' />
-        </Form.Item>
-        <Button block type='primary' formType='submit'>
-          确认
-        </Button>
-      </Form>
-      <View>
-        {Array(50)
-          .fill("1")
-          .map((item) => {
-            return <View key={item}>{item}</View>;
-          })}
-      </View>
-      <View>底部</View>
+			{
+				loading ? <>loading，等1500S</> : null
+			}
+			{
+				!loading && !success ? <>error</> : null
+			}
+      {
+				!loading && success ? (
+					<>
+						<View className='main'>首页</View>
+						<View>{data?.list?.[0].title}</View>
+						<Button block type='primary' onClick={() => {
+							Taro.navigateTo({
+									url: '/pages/other/index'
+								})
+							}}
+						>
+							进入other页面
+						</Button>
+						<View>
+							{Array(50)
+								.fill("1")
+								.map((item) => {
+									return <View key={item}>{item}</View>;
+								})}
+						</View>
+						<View>底部</View>
+					</>
+				) : null
+			}
     </>
   );
 }
