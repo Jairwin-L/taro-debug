@@ -1,5 +1,5 @@
-import { useDidShow } from '@tarojs/taro';
-import { useState } from 'react';
+import { useDidShow, useDidHide, getCurrentInstance, eventCenter } from '@tarojs/taro';
+import { useRef, useState } from 'react';
 
 function testAjax () {
 	return new Promise((resolve) => {
@@ -14,6 +14,8 @@ function testAjax () {
 }
 
 export default function useModel () {
+	const instanceRef = useRef<any>(getCurrentInstance()).current;
+	// const instance: any = getCurrentInstance();
   const [loading, setLoading] = useState<boolean>(true);
   const [resp, setResp] = useState<any>();
 	const fetchData = async  () => {
@@ -23,7 +25,15 @@ export default function useModel () {
 		setResp(response);
 	}
 	useDidShow(() => {
+		const onHideEventId = instanceRef.router.onHide;
+		// const onHideEventId = instance.router.onHide;
+    eventCenter.on(onHideEventId, useDidHide);
 		fetchData()
+  });
+	useDidHide(() => {
+		const onHideEventId = instanceRef.router.onHide;
+		// const onHideEventId = instance.router.onHide;
+		eventCenter.off(onHideEventId, useDidHide);
   });
 	return {
 		...resp,
