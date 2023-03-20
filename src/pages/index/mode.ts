@@ -27,13 +27,13 @@ export default function useModel () {
 	useDidShow(() => {
 		const onHideEventId = instanceRef.router.onHide;
 		// const onHideEventId = instance.router.onHide;
-    eventCenter.on(onHideEventId, useDidHide);
+    eventCenter.on(onHideEventId, fetchData);
 		fetchData()
   });
 	useDidHide(() => {
 		const onHideEventId = instanceRef.router.onHide;
 		// const onHideEventId = instance.router.onHide;
-		eventCenter.off(onHideEventId, useDidHide);
+		eventCenter.off(onHideEventId, fetchData);
   });
 	return {
 		...resp,
