@@ -28,6 +28,7 @@ specifiers:
   '@typescript-eslint/parser': ^5.20.0
   babel-plugin-import: ^1.13.6
   babel-preset-taro: 3.6.2
+  china-division: ^2.6.1
   eslint: ^8.12.0
   eslint-config-taro: 3.6.2
   eslint-plugin-import: ^2.12.0
@@ -60,6 +61,7 @@ dependencies:
   '@tarojs/shared': registry.npmjs.org/@tarojs/shared/3.6.2
   '@tarojs/taro': registry.npmjs.org/@tarojs/taro/3.6.2_@types+react@18.0.28
   babel-plugin-import: registry.npmjs.org/babel-plugin-import/1.13.6
+  china-division: registry.npmjs.org/china-division/2.6.1
   react: registry.npmjs.org/react/18.2.0
   react-dom: registry.npmjs.org/react-dom/18.2.0_react@18.2.0
 
@@ -5392,6 +5394,12 @@ packages:
     name: charenc
     version: 0.0.2
     dev: true
+
+  registry.npmjs.org/china-division/2.6.1:
+    resolution: {integrity: sha512-Iq9YCEWqPcSrD7/7McKpN9QHNbn2iibLmg1NEAxLacijqJzLbytr0sLuKJNY4Exd0LA77N18Pwr9JGgU1p5S6w==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/china-division/-/china-division-2.6.1.tgz}
+    name: china-division
+    version: 2.6.1
+    dev: false
 
   registry.npmjs.org/chokidar/3.5.3:
     resolution: {integrity: sha512-Dr3sfKRP6oTcjf2JmUmFJfeVMvXBdegxB0iVQ5eb2V10uFJUCAS8OByZdVAyVb8xXNz3GjjTgj9kLWsZTqE6kw==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/chokidar/-/chokidar-3.5.3.tgz}
