@@ -3,7 +3,7 @@ lockfileVersion: 5.4
 specifiers:
   '@babel/core': ^7.8.0
   '@babel/runtime': ^7.7.7
-  '@nutui/nutui-react-taro': ^1.4.11
+  '@nutui/nutui-react-taro': ^1.5.5
   '@pmmmwh/react-refresh-webpack-plugin': ^0.5.5
   '@tarojs/cli': 3.6.2
   '@tarojs/components': 3.6.2
@@ -44,7 +44,7 @@ specifiers:
 
 dependencies:
   '@babel/runtime': registry.npmjs.org/@babel/runtime/7.21.0
-  '@nutui/nutui-react-taro': registry.npmjs.org/@nutui/nutui-react-taro/1.4.11_biqbaboplfbrettd7655fr4n2y
+  '@nutui/nutui-react-taro': registry.npmjs.org/@nutui/nutui-react-taro/1.5.5_biqbaboplfbrettd7655fr4n2y
   '@tarojs/components': registry.npmjs.org/@tarojs/components/3.6.2_@types+react@18.0.28
   '@tarojs/helper': registry.npmjs.org/@tarojs/helper/3.6.2
   '@tarojs/plugin-framework-react': registry.npmjs.org/@tarojs/plugin-framework-react/3.6.2_u75edxy3y67fkn4jekn7tac6mu
@@ -1827,10 +1827,10 @@ packages:
       '@babel/helper-validator-identifier': registry.npmjs.org/@babel/helper-validator-identifier/7.19.1
       to-fast-properties: registry.npmjs.org/to-fast-properties/2.0.0
 
-  registry.npmjs.org/@bem-react/classname/1.5.12:
-    resolution: {integrity: sha512-7wc2zfHwGplXh1izmVfM8cHWOHx9eQEl4b2KiVp4Wa6Va/MEhnz+eFwEK+5A8o1tVKvHX0wiXkwDQLfFDl2wYw==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/@bem-react/classname/-/classname-1.5.12.tgz}
+  registry.npmjs.org/@bem-react/classname/1.6.0:
+    resolution: {integrity: sha512-SFBwUHMcb7TFFK5ld88+JhecoEun3/kHZ6KvLDjj3w5hv/tfRV8mtGHA8N42uMctXLF4bPEcr96xwXXcRFuweg==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/@bem-react/classname/-/classname-1.6.0.tgz}
     name: '@bem-react/classname'
-    version: 1.5.12
+    version: 1.6.0
     dev: false
 
   registry.npmjs.org/@csstools/selector-specificity/2.1.1_wajs5nedgkikc5pcuwett7legi:
@@ -2054,17 +2054,16 @@ packages:
       fastq: registry.npmjs.org/fastq/1.15.0
     dev: true
 
-  registry.npmjs.org/@nutui/nutui-react-taro/1.4.11_biqbaboplfbrettd7655fr4n2y:
-    resolution: {integrity: sha512-mLKqVD+7bVdipfH/MA6Bsa0PtLmlaHtvbrq5M4qjJZlvrxxBtNk4Y51VDNdFNrN+TjLfXAUQp7jjXAGVRIELeg==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/@nutui/nutui-react-taro/-/nutui-react-taro-1.4.11.tgz}
-    id: registry.npmjs.org/@nutui/nutui-react-taro/1.4.11
+  registry.npmjs.org/@nutui/nutui-react-taro/1.5.5_biqbaboplfbrettd7655fr4n2y:
+    resolution: {integrity: sha512-++VSrgTs5H726YupgmuRw6b5G8+YPLdSvU96bBR+vSSKUeuhZaJKeuaiHnAPfs0uKgEmtWdKWMlf5qonPxV4Tw==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/@nutui/nutui-react-taro/-/nutui-react-taro-1.5.5.tgz}
+    id: registry.npmjs.org/@nutui/nutui-react-taro/1.5.5
     name: '@nutui/nutui-react-taro'
-    version: 1.4.11
-    engines: {node: '>=16.0.0'}
+    version: 1.5.5
     peerDependencies:
       react: ^16.8.0 || ^17.0.0 || ^18.0.0
     dependencies:
       '@babel/runtime': registry.npmjs.org/@babel/runtime/7.21.0
-      '@bem-react/classname': registry.npmjs.org/@bem-react/classname/1.5.12
+      '@bem-react/classname': registry.npmjs.org/@bem-react/classname/1.6.0
       '@react-spring/web': registry.npmjs.org/@react-spring/web/9.6.1_biqbaboplfbrettd7655fr4n2y
       '@use-gesture/react': registry.npmjs.org/@use-gesture/react/10.2.20_react@18.2.0
       async-validator: registry.npmjs.org/async-validator/4.2.5
